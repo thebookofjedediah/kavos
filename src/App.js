@@ -1,13 +1,17 @@
 import './App.css';
 import Routes from './Routes';
-import Nav from './components/Nav';
+import Appbar from './components/Appbar';
+import { Theme } from './Theme';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Routes />
-    </div>
+    <MuiThemeProvider theme={Theme}>
+      <div className="App">
+        <Appbar />
+        <Routes />
+      </div>
+    </MuiThemeProvider>
   );
 }
 
