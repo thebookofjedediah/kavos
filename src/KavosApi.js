@@ -34,9 +34,8 @@ class KavosApi {
 
   // Individual API routes
 
-
   static async register(data) {
-    let res = await this.request(`users`, data, "post");
+    let res = await this.request(`register`, data, "post");
     return res.token;
   }
 
