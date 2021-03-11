@@ -48,6 +48,16 @@ class KavosApi {
     let res = await this.request(`users/${username}`);
     return res.user;
   }
+
+  static async getBrand(handle) {
+    let res = await this.request(`brands/${handle}`);
+    return res.brand;
+  }
+
+  static async getBrands(name) {
+    let res = await this.request("brands", { name });
+    return res.brands;
+  }
   
 }
 
