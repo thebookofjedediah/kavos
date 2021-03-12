@@ -24,11 +24,13 @@ const Brands = () => {
     return (
         <Container>
         {brands.map(brand => (
-            <BrandCard 
-                key={brand.handle}
-                name={brand.name} 
-                handle={brand.handle}
-            />
+            <li key={brand.handle}>
+                <BrandCard 
+                    key={brand.handle}
+                    name={brand.name} 
+                    handle={brand.handle}
+                />
+            </li>
         ))}
         </Container>
     )

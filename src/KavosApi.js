@@ -58,6 +58,16 @@ class KavosApi {
     let res = await this.request("brands", { name });
     return res.brands;
   }
+
+  static async getCoffee(handle) {
+    let res = await this.request(`coffees/${handle}`);
+    return res.coffee;
+  }
+
+  static async getCoffees() {
+    let res = await this.request("coffees");
+    return res.coffees;
+  }
   
 }
 

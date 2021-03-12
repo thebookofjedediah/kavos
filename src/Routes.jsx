@@ -6,6 +6,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Brands from './components/Brands';
 import Brand from './components/Brand';
+import Coffees from './components/Coffees';
+import Coffee from './components/Coffee';
 import PrivateRoute from './components/PrivateRoute';
 
 const Routes = ({ setToken }) => {
@@ -16,6 +18,12 @@ const Routes = ({ setToken }) => {
             </PrivateRoute>
             <PrivateRoute exact path="/brands/:handle">
                 <Brand />
+            </PrivateRoute>
+            <PrivateRoute exact path="/coffees">
+                <Coffees />
+            </PrivateRoute>
+            <PrivateRoute exact path="/coffees/:handle">
+                <Coffee />
             </PrivateRoute>
             <Route exact path="/login">
                 <Login setToken={setToken} />
